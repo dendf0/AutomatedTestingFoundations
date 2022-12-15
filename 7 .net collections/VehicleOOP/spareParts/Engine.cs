@@ -1,4 +1,6 @@
-﻿namespace VehicleOOP
+﻿using System;
+
+namespace VehicleOOP
 {
     public class Engine
     {
@@ -13,13 +15,24 @@
             Diesel,
             Electrical
         }
+
         public Engine(double power, double capacity, string serialNumber, Engine.Types type = Types.Gasoline)
         {
+            if (power < 0)
+            {
+                throw new ArgumentException("Engine power cannot be negative");
+            }
+            if (power < 0)
+            {
+                throw new ArgumentException("Engine capacity cannot be negative");
+            }
+
             this.power = power;
             this.capacity = capacity;
             this.serialNumber = serialNumber;
             this.type = type;
         }
+
         public override string ToString()
         {
             string result;

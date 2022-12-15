@@ -1,11 +1,13 @@
 ﻿namespace MaxDiffChars
 {
-    class MaxDiffChars
+    public class MaxDiffChars
     {
-        public static int maxDiffChars(string str)
+        public static int MaximumDifferentCharacters(string str)
         {
             if (str.Length == 0)
+            {
                 return 0;
+            }
             int maxConsecutive = 1;
             int currentMax = 1;
             char lastChar = str[0];

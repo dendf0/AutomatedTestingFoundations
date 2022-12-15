@@ -1,4 +1,6 @@
-﻿namespace VehicleOOP
+﻿using System;
+
+namespace VehicleOOP
 {
     public class Transmission
     {
@@ -9,11 +11,18 @@
             SemiAutomatic,
             ContinuouslyVariable
         }
+
         public Transmission.Types type;
         public int gearQuantity;
         public string manufacturer;
+
         public Transmission(int gearQuantity, string manufacturer, Transmission.Types type = Types.Automatic)
         {
+            if (gearQuantity < 0)
+            {
+                throw new ArgumentException("Gear quantity cannot be negative");
+            }
+
             this.gearQuantity = gearQuantity;
             this.manufacturer = manufacturer;
             this.type = type;

@@ -5,44 +5,44 @@ using System.Collections.Generic;
 
 namespace VehicleOOP
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Engine carEngine = new Engine(2000, 1.6,"A12",Engine.Types.Gasoline);
-            Engine carEngine2 = new Engine(2000, 1.2,"AA12",Engine.Types.Electrical);
+            Engine secondCarEngine = new Engine(2000, 1.2,"AA12",Engine.Types.Electrical);
             Chassis carChassis = new Chassis(4, "a12", 1000);
-            Chassis carChassis2 = new Chassis(4, "aa12", 800);
+            Chassis secondCarChassis = new Chassis(4, "aa12", 800);
             Transmission carTransmission = new Transmission(6, "BMW", Transmission.Types.Automatic);
-            Transmission carTransmission2 = new Transmission(6, "Toyota", Transmission.Types.SemiAutomatic);
+            Transmission secondCarTransmission = new Transmission(6, "Toyota", Transmission.Types.SemiAutomatic);
 
             Engine truckEngine = new Engine(5000, 5, "B34", Engine.Types.Diesel);
-            Engine truckEngine2 = new Engine(4500, 4.5, "BB34", Engine.Types.Gasoline);
+            Engine secondTruckEngine = new Engine(4500, 4.5, "BB34", Engine.Types.Gasoline);
             Chassis truckChassis = new Chassis(10, "b34", 7000);
-            Chassis truckChassis2 = new Chassis(8, "bb34", 5000);
+            Chassis secondTruckChassis = new Chassis(8, "bb34", 5000);
             Transmission truckTransmission = new Transmission(6, "Man", Transmission.Types.Manual);
-            Transmission truckTransmission2 = new Transmission(6, "Lada", Transmission.Types.SemiAutomatic);
+            Transmission secondTruckTransmission = new Transmission(6, "Lada", Transmission.Types.SemiAutomatic);
 
             Engine busEngine = new Engine(4000, 4, "C56", Engine.Types.Gasoline);
-            Engine busEngine2 = new Engine(3500, 3.5, "CC56", Engine.Types.Electrical);
+            Engine secondBusEngine = new Engine(3500, 3.5, "CC56", Engine.Types.Electrical);
             Chassis busChassis = new Chassis(6, "c56", 3000);
-            Chassis busChassis2 = new Chassis(3, "cc56", 2000);
+            Chassis secondBusChassis = new Chassis(3, "cc56", 2000);
             Transmission busTransmission = new Transmission(6, "Volvo", Transmission.Types.SemiAutomatic);
-            Transmission busTransmission2 = new Transmission(6, "Liaz", Transmission.Types.ContinuouslyVariable);
+            Transmission secondBusTransmission = new Transmission(6, "Liaz", Transmission.Types.ContinuouslyVariable);
 
             Engine scooterEngine = new Engine(500, 0.5, "D78", Engine.Types.Electrical);
             Chassis scooterChassis = new Chassis(2, "d78", 300);
             Transmission scooterTransmission = new Transmission(6, "Stels", Transmission.Types.ContinuouslyVariable);
 
             Car car = new Car(carEngine, carChassis, carTransmission);
-            Car car2 = new Car(carEngine2, carChassis2, carTransmission2);
+            Car secondCar = new Car(secondCarEngine, secondCarChassis, secondCarTransmission);
             Truck truck = new Truck(truckEngine, truckChassis, truckTransmission);
-            Truck truck2 = new Truck(truckEngine2, truckChassis2, truckTransmission2);
+            Truck secondTruck = new Truck(secondTruckEngine, secondTruckChassis, secondTruckTransmission);
             Bus bus = new Bus(busEngine, busChassis, busTransmission);
-            Bus bus2 = new Bus(busEngine2, busChassis2, busTransmission2);
+            Bus secondBus = new Bus(secondBusEngine, secondBusChassis, secondBusTransmission);
             Scooter scooter = new Scooter(scooterEngine, scooterChassis, scooterTransmission);
 
-            List<Vehicle> vehicles = new List<Vehicle> { car, car2, truck, truck2, bus, bus2, scooter };
+            List<Vehicle> vehicles = new List<Vehicle> { car, secondCar, truck, secondTruck, bus, secondBus, scooter };
 
             // all info on vechicles with engine capacity > 1.5
             var bigEnginesVehicles = new XElement("Vehicles",

@@ -4,12 +4,13 @@ using System.Text;
 
 namespace Interface
 {
-    class Bird : FlyingThing, IFlyable
+    public class Bird : FlyingThing, IFlyable
     {
         public void FlyTo(Coordinate coord)
         {
             currentCoordinate = coord;
         }
+
         public double GetFlyTime(Coordinate coord)
         {
             double time = 0;
@@ -22,6 +23,7 @@ namespace Interface
         }
 
         public Bird(Coordinate coord) : base(coord) { }
+
         public Bird() : base() { }
     }
 }

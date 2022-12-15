@@ -2,16 +2,18 @@
 
 namespace Interface
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Bird bird = new Bird();
             Plane plane = new Plane();
             Drone drone = new Drone();
+
             Coordinate coordBird = new Coordinate(5, 5, 5);
             Coordinate coordPlane = new Coordinate(150000, 100000, 50000);
             Coordinate coordDrone = new Coordinate(100, 200, 300);
+
             double timeBird = bird.GetFlyTime(coordBird);
             double timePlane = plane.GetFlyTime(coordPlane);
             double timeDrone = drone.GetFlyTime(coordDrone);

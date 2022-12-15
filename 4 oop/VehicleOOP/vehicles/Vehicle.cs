@@ -7,14 +7,18 @@ namespace VehicleOOP
     public abstract class Vehicle
     {
         public Engine engine { set; get; }
+
         public Chassis chassis { set; get; }
+
         public Transmission transmission { set; get; }
+
         public Vehicle(Engine engine, Chassis chassis, Transmission transmission)
         {
             this.engine = engine;
             this.chassis = chassis;
             this.transmission = transmission;
         }
+
         public override string ToString()
         {
             string result;

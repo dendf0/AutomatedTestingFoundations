@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Interface
 {
-    class Drone : FlyingThing, IFlyable
+    public class Drone : FlyingThing, IFlyable
     {
         public void FlyTo(Coordinate coord)
         {
@@ -14,6 +14,7 @@ namespace Interface
                 currentCoordinate = coord;
             }
         }
+
         public double GetFlyTime(Coordinate coord)
         {
             double distance = Distance(coord);
@@ -27,11 +28,13 @@ namespace Interface
             time = distance / speed + ((uint)(distance / speed) % 600) * 60;
             return time;
         }
+
         public Drone(Coordinate coord) : base(coord)
         {
             maxDistance = 7000;
             speed = 10;
         }
+
         public Drone() : base()
         {
             maxDistance = 7000;

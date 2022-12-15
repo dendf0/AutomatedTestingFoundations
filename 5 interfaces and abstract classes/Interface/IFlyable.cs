@@ -2,13 +2,14 @@
 
 namespace Interface
 {
-    interface IFlyable
+    public interface IFlyable
     {
         /// <summary>
         /// Flies to new coordinate if possible
         /// </summary>
         /// <param name="coord"></param>
-        void FlyTo(Coordinate coord);
+        public void FlyTo(Coordinate coord);
+
         /// <summary>
         /// Calculates time to get to new coordinate
         /// </summary>
@@ -16,6 +17,6 @@ namespace Interface
         /// <returns>
         /// Seconds to fly to new coordinate
         /// </returns>
-        double GetFlyTime(Coordinate coord);
+        public double GetFlyTime(Coordinate coord);
     }
 }

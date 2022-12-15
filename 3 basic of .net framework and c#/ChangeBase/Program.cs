@@ -18,10 +18,12 @@ namespace NewBase
                     Console.WriteLine("Wrong new base!");
                     continue;
                 }
-                Console.WriteLine("Your number in new base: " + NewBase.newBase(input,nBase));
-
+                Console.WriteLine("Your number in new base: " + NewBase.SetNewBase(input,nBase));
                 Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-                if (Console.ReadLine() == "n") endApp = true;
+                if (Console.ReadLine() == "n")
+                {
+                    endApp = true;
+                }
                 Console.WriteLine();
             }
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Interface
 {
-    class Plane : FlyingThing, IFlyable
+    public class Plane : FlyingThing, IFlyable
     {
         public void FlyTo(Coordinate coord)
         {
@@ -44,10 +44,12 @@ namespace Interface
             time += distance / speed;
             return time;
         }
+
         public Plane(Coordinate coord) : base(coord)
         {
             maxDistance = 15000000;
         }
+
         public Plane() : base()
         {
             maxDistance = 15000000;
